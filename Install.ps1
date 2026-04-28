@@ -18,7 +18,7 @@ Set-Location "sbox-source"
 
 # Patch AppID to Spacewar
 $appFile = ".\engine\Sandbox.Engine\Application.cs"
-(Get-Content $appFile) -replace 'AppId\s*=\s*\d+', 'AppId = 480' | Set-Content $appFile
+(Get-Content $appFile) -replace '= 590830;', '= 480;' | Set-Content $appFile
 
 # Bootstrap
 dotnet build ".\engine\Tools\ShaderCompiler"

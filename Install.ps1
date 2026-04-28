@@ -21,6 +21,7 @@ $appFile = ".\engine\Sandbox.Engine\Application.cs"
 (Get-Content $appFile) -replace 'AppId\s*=\s*\d+', 'AppId = 480' | Set-Content $appFile
 
 # Bootstrap
+dotnet build ".\engine\Tools\ShaderCompiler"
 .\Bootstrap.bat
 
 # Open game directory
